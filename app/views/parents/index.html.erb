@@ -1,8 +1,8 @@
 
 
 <% if user_signed_in? %>
-
-
+<!-- We used bootstrap to design our table to look nicer on the pages instead of having just the plain table-->
+<!-- We used bootstrap to make the froms and tables look nicer with some design elements jumbotron a square box surround was used and rows where as we scroll over the lines it changes color-->
   <table class="table table-striped table-hover table-bordered">
     <thead class='table-info'>
       <tr>
@@ -20,7 +20,6 @@
     <tbody>
       <% @parents.each do |parent| %>
         <% if parent.user == current_user %>
-
         <tr>
           <td>
               <%= link_to parent.first_name + ' ' +  parent.last_name, parent %>
@@ -38,9 +37,9 @@
 
   </tbody>
 </table>
-
+<!--This give a line break as the buttons where on top of each other -->
 <br>
-
+<!--The buttons where styled using bootstrap to make them stand out nicer-->
   <%= link_to 'New Parent', new_parent_path, class:"btn btn-primary"  %>
 <% else %>
 

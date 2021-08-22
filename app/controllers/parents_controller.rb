@@ -16,7 +16,6 @@ class ParentsController < ApplicationController
   def new
     #@parent = Parent.new
     @parent = current_user.parents.build
-
   end
 
   # GET /parents/1/edit

@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS  was installed and this is the link this was copied from bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-  <title>FunGalaxy Childcare</title>
+  <title>FG Childcare</title>
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -18,13 +18,16 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
+<!--this is where we put the tag to render the partial onto the screen we are using the render tag <%%> %> -->
   <%= render 'home/header' %>
   <div class="container">
     <br/>
+    <!--This tells me if there is an alert to do something
     <% if notice %>
       <%= render "layouts/alerts" %>
       <% end %>
     <br/>
+    <!- once inside the yield tag the information will be sent to the relevent pages -->
   <%= yield %>
   </div>
 

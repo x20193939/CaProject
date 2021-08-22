@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+#this is where we can add functions and rails will automatically added the code needed to run the gem.
 ruby '3.0.1'
 
 gem 'rails', '~> 6.1.4'
@@ -20,9 +20,9 @@ group :development do
 
   gem 'web-console', '>= 4.1.0'
   gem 'sqlite3', '~> 1.4'
-  #gem 'rack-mini-profiler', '~> 2.0'
-  #gem 'listen', '~> 3.3'
-  #gem 'spring'
+  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'listen', '~> 3.3'
+  gem 'spring'
 end
 
 group :production do

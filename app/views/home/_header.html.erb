@@ -1,22 +1,25 @@
+<!-- this give the navbar a color of blue and wrtiting white-->
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <!-- this links to the root path and we need to give it a class this is the ancor task this will bring us back to our home page when we click on it -->
   <%= link_to 'FG Childcare', root_path, class:"navbar-brand" %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
+          <!--the home about path in our home controller which is in ur routes on config -->
           <%= link_to 'About Us', home_about_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
         </li>
-
+<!--This is telling me if the user is signed in they can do the below taks  -->
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to 'Add a Parent', new_parent_path, class:"nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link" %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to 'edit profile', edit_user_registration_path, class:"nav-link" %>
