@@ -1,0 +1,32 @@
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <h1 class="display-4">
+    <%= @parent.first_name %>
+    <%= @parent.last_name %>
+
+  </h1>
+  <p class="lead">
+    <%= @parent.email %>|
+    <%= @parent.phone %>
+  </p>
+
+  <hr class="my-4">
+  <h1>Childs Details</h1>
+  <p>
+    <%= @parent.childs_first_name %>
+    <%= @parent.childs_last_name %> |
+    <%= @parent.childs_dob %>
+   </p>
+  <br/>
+
+  <%= link_to 'Edit', edit_parent_path(@parent), class:"btn btn-primary" %>
+  <%= link_to 'Back', parents_path, class:"btn btn-info" %>
+
+  </div>
+</div>
+
+
+
+

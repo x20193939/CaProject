@@ -1,0 +1,56 @@
+<%= form_with(model: parent) do |form| %>
+  <% if parent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parent.errors.count, "error") %> prohibited this parent from being saved:</h2>
+
+      <ul>
+        <% parent.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name"%>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :email, class:"form-control", placeholder:"Email Address" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :phone, class:"form-control", placeholder:"Phone No" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :childs_first_name, class:"form-control", placeholder:"Child's First Name" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :childs_last_name, class:"form-control", placeholder:"Child's Last Name" %>
+  </div>
+  <br/>
+
+  <div class="field form-group">
+    <%= form.text_field :childs_dob, class:"form-control", placeholder:"Child's DOB" %>
+  </div>
+<br/>
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :parent_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+<br/>
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Editing Parent</h1>
+<br/>
+<%= render 'form', parent: @parent %>
+<br/>
+
+<%= link_to 'Show', @parent, class:"btn btn-info" %>
+<%= link_to 'Remove', @parent, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info"  %>
+<%= link_to 'Back', parents_path, class:"btn btn-info" %>
